@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="QR16" size="200.000000 200.000000" />
+    <ImageTarget name="QR15" size="200.000000 200.000000" />
+    <ImageTarget name="QR14" size="200.000000 200.000000" />
+    <ImageTarget name="QR13" size="200.000000 200.000000" />
+    <ImageTarget name="QR12" size="200.000000 200.000000" />
+    <ImageTarget name="QR11" size="200.000000 200.000000" />
+    <ImageTarget name="QR10" size="200.000000 200.000000" />
+    <ImageTarget name="QR09" size="200.000000 200.000000" />
+    <ImageTarget name="QR08" size="200.000000 200.000000" />
+    <ImageTarget name="QR07" size="200.000000 200.000000" />
+    <ImageTarget name="QR06" size="200.000000 200.000000" />
+    <ImageTarget name="QR05" size="200.000000 200.000000" />
+    <ImageTarget name="QR04" size="200.000000 200.000000" />
+    <ImageTarget name="QR03" size="200.000000 200.000000" />
+    <ImageTarget name="QR02" size="200.000000 200.000000" />
+    <ImageTarget name="QR01" size="200.000000 200.000000" />
+  </Tracking>
+</QCARConfig>

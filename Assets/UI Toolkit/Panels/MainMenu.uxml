@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgb(255, 255, 255); flex-direction: column; align-items: center; justify-content: flex-start; align-self: center;">
+        <ui:VisualElement name="Logo" style="flex-grow: 0; background-color: rgba(0, 0, 240, 0); width: 212px; justify-content: flex-end; align-items: center; flex-direction: column; -unity-background-image-tint-color: rgb(255, 255, 255); height: 57px; background-image: url(&apos;project://database/Assets/UI%20Toolkit/Images/DDFF-Logo.png?fileID=2800000&amp;guid=032709f6985eaaf4988273d11878b6a2&amp;type=3#DDFF-Logo&apos;); top: 10%;">
+            <ui:Label tabindex="-1" text="AR Experience" display-tooltip-when-elided="true" name="Text" style="top: 75px; font-size: 30px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Button" style="flex-grow: 0; background-color: rgba(32, 32, 32, 0); width: 254px; justify-content: space-around; align-items: auto; flex-direction: row; -unity-background-image-tint-color: rgb(255, 255, 255); height: 71px; top: 10%; align-self: center; color: rgba(27, 27, 27, 0);">
+            <ui:Button text="Start" display-tooltip-when-elided="true" name="Start_Button" style="width: 200px; background-color: rgb(0, 196, 0); font-size: 24px; margin-top: 2px; top: 100%; color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="App_QR_Code" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/QR_Codes/App_QR_Code.png?fileID=2800000&amp;guid=930070fd48f7719408b4d31b6e9fdc13&amp;type=3#App_QR_Code&apos;); width: 100px; height: 100px; align-items: center; justify-content: space-between; align-self: center; flex-direction: column; position: relative; top: 30%;">
+            <ui:Label tabindex="-1" text="Share this app with a friend!" display-tooltip-when-elided="true" name="Text" style="top: 100%; font-size: 16px; width: 250px; align-items: center; -unity-text-align: upper-center; text-overflow: ellipsis;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
