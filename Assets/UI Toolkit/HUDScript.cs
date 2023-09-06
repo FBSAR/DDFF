@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class HUDScript : MonoBehaviour
 {
-    public GameObject cameraButton;
     GameObject hamMenuOpen;
-    GameObject hamMenuClose;
     GameObject sideNav;
     private IEnumerator Screenshot()
     {
