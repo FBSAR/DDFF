@@ -5,6 +5,7 @@ public class MainMenuScript : MonoBehaviour
 {
     public GameObject HUD;
     public GameObject mainMenu;
+    public GameObject ScanningUI;
     public void Start()
     {   
         // Hide HUD during the Main Menu
@@ -21,5 +22,6 @@ public class MainMenuScript : MonoBehaviour
         // Reveal the HUD, which includes the Hamburger Menu and the CameraButton
         HUD = GameObject.Find("HUD");
         HUD.transform.localScale = new Vector3(1, 1, 1);
+        ScanningUI.transform.localScale = new Vector3(1, 1, 1);
     }
 }
