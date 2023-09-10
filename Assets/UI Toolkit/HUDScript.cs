@@ -5,6 +5,8 @@ public class HUDScript : MonoBehaviour
 {
     GameObject hamMenuOpen;
     GameObject sideNav;
+    GameObject scanningUI;
+    GameObject areaTarget;
     private IEnumerator Screenshot()
     {
         yield return new WaitForEndOfFrame();
@@ -46,5 +48,19 @@ public class HUDScript : MonoBehaviour
 
         // Hide SideMenu from Screen
         sideNav.transform.localScale = new Vector3(0, 1, 0);
+    }
+    public void HideScanningUI()
+    {
+        scanningUI = GameObject.Find("ScanningUI");
+        areaTarget = GameObject.Find("705NightAreaTarget");
+
+        // Track all AreaTargets
+        // When an AreaTarget is Lost, Show ScanningUI
+
+    }
+    public void TrackAreaTargets()
+    {
+        areaTarget = GameObject.Find("705NightAreaTarget");
+
     }
 }
