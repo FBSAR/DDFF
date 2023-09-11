@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Vuforia;
 
 public class HUDScript : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class HUDScript : MonoBehaviour
     GameObject sideNav;
     GameObject scanningUI;
     GameObject areaTarget;
+    AreaTargetBehaviour AreaTargetBeh;
     private IEnumerator Screenshot()
     {
         yield return new WaitForEndOfFrame();
@@ -21,6 +23,10 @@ public class HUDScript : MonoBehaviour
         NativeGallery.SaveImageToGallery(texture, "DDFF Pic", name);
 
         Destroy(texture);
+    }
+    public void Update()
+    {
+        //TrackAreaTargets();
     }
     public void TakePicture()
     {
@@ -52,15 +58,15 @@ public class HUDScript : MonoBehaviour
     public void HideScanningUI()
     {
         scanningUI = GameObject.Find("ScanningUI");
-        areaTarget = GameObject.Find("705NightAreaTarget");
-
+        scanningUI.transform.localScale = new Vector3(0, 0, 0);
+        
         // Track all AreaTargets
         // When an AreaTarget is Lost, Show ScanningUI
 
     }
     public void TrackAreaTargets()
     {
-        areaTarget = GameObject.Find("705NightAreaTarget");
-
+        areaTarget = GameObject.Find("705AreaTargetDay");
+        Debug.Log(areaTarget);
     }
 }

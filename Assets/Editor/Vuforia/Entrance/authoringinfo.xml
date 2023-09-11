@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-2.1491 -30.5174 -8.8895 37.7710 -15.8663 26.4810" targetId="92f288ee42244caca7ad6fc5d3b8c43e" name="Entrance" pathAuthoring="92f288ee42244caca7ad6fc5d3b8c43e_authoring.glb" pathOcclusion="92f288ee42244caca7ad6fc5d3b8c43e_occlusion.3dt" pathNavMesh="92f288ee42244caca7ad6fc5d3b8c43e_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>

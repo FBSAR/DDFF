@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-28.8595 -15.9849 -38.3577 -5.9008 6.9598 -0.8402" targetId="989b613fc41547a08c75307c46bd16ae" name="MacBridge" pathAuthoring="989b613fc41547a08c75307c46bd16ae_authoring.glb" pathOcclusion="989b613fc41547a08c75307c46bd16ae_occlusion.3dt" pathNavMesh="989b613fc41547a08c75307c46bd16ae_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>
