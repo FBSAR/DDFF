@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DroneController : MonoBehaviour
@@ -81,7 +80,7 @@ public class DroneController : MonoBehaviour
                 break;
         
         case DroneState.DRONE_STATE_MOVING_UP:
-                if (_Anim.GetBool("MoveUp") == false)
+            if (_Anim.GetBool("MoveUp") == false)
         {
             _State = DroneState.DRONE_STATE_FLYING;
         }
