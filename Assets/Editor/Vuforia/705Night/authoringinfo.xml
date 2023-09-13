@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-8.1582 -2.4736 -7.7042 5.0626 3.3699 4.0140" targetId="78df8707ce2746f5b666c6fea047dd4a" name="705Night" pathAuthoring="78df8707ce2746f5b666c6fea047dd4a_authoring.glb" pathOcclusion="78df8707ce2746f5b666c6fea047dd4a_occlusion.3dt" pathNavMesh="78df8707ce2746f5b666c6fea047dd4a_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>
