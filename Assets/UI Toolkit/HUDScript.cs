@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 using Vuforia;
 
 public class HUDScript : MonoBehaviour
@@ -7,8 +9,29 @@ public class HUDScript : MonoBehaviour
     GameObject hamMenuOpen;
     GameObject sideNav;
     GameObject scanningUI;
-    GameObject areaTarget;
-    AreaTargetBehaviour AreaTargetBeh;
+    GameObject HUD;
+    GameObject infoUI;
+    GameObject tookPicUI;
+    Timer timer;
+    AreaTargetBehaviour areaTargetBeh;
+    AreaTargetBehaviour macBridgeArea;
+    AreaTargetBehaviour boothArea;
+    AreaTargetBehaviour entranceArea;
+    AreaTargetBehaviour newlabArea;
+    AreaTargetBehaviour btsArea;
+    MainMenuScript mainMenuScript;
+    public void Start()
+    {
+        mainMenuScript = GameObject.Find("MainMenuScript").GetComponent<MainMenuScript>();
+        tookPicUI = GameObject.Find("TookPicUI");
+    }
+    public void Update()
+    {
+        if (mainMenuScript.startButtonPressed == true)
+        {
+            TrackAreaTargets();
+        }
+    }
     private IEnumerator Screenshot()
     {
         yield return new WaitForEndOfFrame();
@@ -24,15 +47,24 @@ public class HUDScript : MonoBehaviour
 
         Destroy(texture);
     }
-    public void Update()
-    {
-        //TrackAreaTargets();
-    }
     public void TakePicture()
     {
         StartCoroutine("Screenshot");
+        //tookPicUI.transform.localScale = new Vector3(1, 1, 1);
+        //timer = new Timer(2000, alertTimerCallback);
     }
-
+    public void alertTimerCallback()
+    {
+        tookPicUI.transform.localScale = new Vector3(0, 0, 0);
+    }
+    public void goToFBSSite()
+    {
+        Application.OpenURL("http://finalbossar.com");
+    }
+    public void goToDCSite()
+    {
+        Application.OpenURL("https://dronecapital.com/");
+    }
     public void SideMenuOpen()
     {
         hamMenuOpen = GameObject.Find("HamMenu-Open");
@@ -55,6 +87,24 @@ public class HUDScript : MonoBehaviour
         // Hide SideMenu from Screen
         sideNav.transform.localScale = new Vector3(0, 1, 0);
     }
+    public void MessageUIOpen()
+    {
+        infoUI = GameObject.Find("InfoUI");
+
+        // Show MessageUI
+        infoUI.transform.localScale = new Vector3(1, 1, 1);
+    }
+    public void MessageUIClose()
+    {
+        infoUI = GameObject.Find("InfoUI");
+
+        // Hide MessageUI
+        infoUI.transform.localScale = new Vector3(0, 0, 0);
+
+        // Reveal the HUD
+        HUD = GameObject.Find("HUD");
+        HUD.transform.localScale = new Vector3(1, 1, 1);
+    }
     public void HideScanningUI()
     {
         scanningUI = GameObject.Find("ScanningUI");
@@ -66,7 +116,41 @@ public class HUDScript : MonoBehaviour
     }
     public void TrackAreaTargets()
     {
-        areaTarget = GameObject.Find("705AreaTargetDay");
-        Debug.Log(areaTarget);
+        areaTargetBeh = GameObject.Find("705NightAreaTarget").GetComponent<AreaTargetBehaviour>();
+        macBridgeArea = GameObject.Find("MacAreaTarget").GetComponent<AreaTargetBehaviour>();
+        boothArea = GameObject.Find("BoothAreaTarget").GetComponent<AreaTargetBehaviour>();
+        entranceArea = GameObject.Find("EntranceAreaTarget").GetComponent<AreaTargetBehaviour>();
+        newlabArea = GameObject.Find("EntranceAreaTarget").GetComponent<AreaTargetBehaviour>();
+        btsArea = GameObject.Find("EntranceAreaTarget").GetComponent<AreaTargetBehaviour>();
+
+        if (areaTargetBeh.TargetStatus.Status == Status.NO_POSE ||
+           areaTargetBeh.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED &&
+
+           macBridgeArea.TargetStatus.Status == Status.NO_POSE ||
+           macBridgeArea.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED &&
+
+           boothArea.TargetStatus.Status == Status.NO_POSE ||
+           boothArea.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED &&
+
+           entranceArea.TargetStatus.Status == Status.NO_POSE ||
+           entranceArea.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED &&
+
+           newlabArea.TargetStatus.Status == Status.NO_POSE ||
+           newlabArea.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED &&
+
+           btsArea.TargetStatus.Status == Status.NO_POSE ||
+           btsArea.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED
+           )
+        {
+            scanningUI = GameObject.Find("ScanningUI");
+            scanningUI.transform.localScale = new Vector3(1, 1, 1);
+        } else
+        {
+            scanningUI = GameObject.Find("ScanningUI");
+            scanningUI.transform.localScale = new Vector3(0, 0, 0);
+        }
+        
+        
+
     }
 }

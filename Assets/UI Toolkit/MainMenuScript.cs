@@ -6,6 +6,8 @@ public class MainMenuScript : MonoBehaviour
     public GameObject HUD;
     public GameObject mainMenu;
     public GameObject ScanningUI;
+    GameObject infoUI;
+    public bool startButtonPressed = false;
     public void Start()
     {   
         // Hide HUD during the Main Menu
@@ -14,16 +16,15 @@ public class MainMenuScript : MonoBehaviour
 
     public void StartButton()
     {
-        // After the user presses the Start Button, Hide the "MainMenuWrapper",
-        // which holds all the elements of the Main Menu.
+        // After the user presses the Start Button, Hide the "MainMenuWrapper"
         mainMenu = GameObject.Find("MainMenuWrapper");
         mainMenu.SetActive(false);
 
-        // Reveal the HUD, which includes the Hamburger Menu and the CameraButton
-        HUD = GameObject.Find("HUD");
-        ScanningUI = GameObject.Find("ScanningUI");
+        startButtonPressed = true;
 
-        //HUD.transform.localScale = new Vector3(1, 1, 1);
-        ScanningUI.transform.localScale = new Vector3(1, 1, 1);
+        infoUI = GameObject.Find("InfoUI");
+
+        // Show MessageUI
+        infoUI.transform.localScale = new Vector3(1, 1, 1);
     }
 }
