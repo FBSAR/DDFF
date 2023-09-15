@@ -13,12 +13,7 @@ public class HUDScript : MonoBehaviour
     GameObject infoUI;
     GameObject tookPicUI;
     Timer timer;
-    AreaTargetBehaviour areaTargetBeh;
-    AreaTargetBehaviour macBridgeArea;
-    AreaTargetBehaviour boothArea;
-    AreaTargetBehaviour entranceArea;
-    AreaTargetBehaviour newlabArea;
-    AreaTargetBehaviour btsArea;
+    
     MainMenuScript mainMenuScript;
     public void Start()
     {
@@ -114,17 +109,30 @@ public class HUDScript : MonoBehaviour
         // When an AreaTarget is Lost, Show ScanningUI
 
     }
+
+    AreaTargetBehaviour areaTargetDay;
+    AreaTargetBehaviour areaTargetNight;
+    AreaTargetBehaviour macBridgeArea;
+    AreaTargetBehaviour boothArea;
+    AreaTargetBehaviour entranceArea;
+    AreaTargetBehaviour newlabArea;
+    AreaTargetBehaviour btsArea;
     public void TrackAreaTargets()
     {
-        areaTargetBeh = GameObject.Find("705NightAreaTarget").GetComponent<AreaTargetBehaviour>();
+        areaTargetDay = GameObject.Find("705AreaTargetDay").GetComponent<AreaTargetBehaviour>();
+        areaTargetNight = GameObject.Find("705NightAreaTarget").GetComponent<AreaTargetBehaviour>();
         macBridgeArea = GameObject.Find("MacAreaTarget").GetComponent<AreaTargetBehaviour>();
         boothArea = GameObject.Find("BoothAreaTarget").GetComponent<AreaTargetBehaviour>();
         entranceArea = GameObject.Find("EntranceAreaTarget").GetComponent<AreaTargetBehaviour>();
         newlabArea = GameObject.Find("EntranceAreaTarget").GetComponent<AreaTargetBehaviour>();
         btsArea = GameObject.Find("EntranceAreaTarget").GetComponent<AreaTargetBehaviour>();
 
-        if (areaTargetBeh.TargetStatus.Status == Status.NO_POSE ||
-           areaTargetBeh.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED &&
+        if (
+           areaTargetDay.TargetStatus.Status == Status.NO_POSE ||
+           areaTargetDay.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED &&
+
+           areaTargetNight.TargetStatus.Status == Status.NO_POSE ||
+           areaTargetNight.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED &&
 
            macBridgeArea.TargetStatus.Status == Status.NO_POSE ||
            macBridgeArea.TargetStatus.StatusInfo == StatusInfo.NOT_OBSERVED &&
@@ -144,10 +152,16 @@ public class HUDScript : MonoBehaviour
         {
             scanningUI = GameObject.Find("ScanningUI");
             scanningUI.transform.localScale = new Vector3(1, 1, 1);
+
+            HUD = GameObject.Find("HUD");
+            HUD.transform.localScale = new Vector3(0, 0, 0);
         } else
         {
             scanningUI = GameObject.Find("ScanningUI");
             scanningUI.transform.localScale = new Vector3(0, 0, 0);
+
+            HUD = GameObject.Find("HUD");
+            HUD.transform.localScale = new Vector3(1, 1, 1);
         }
         
         

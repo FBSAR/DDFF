@@ -1556,29 +1556,29 @@ MonoBehaviour:
   m_Text: 'Welcome to the Detroit Drone Film Festival AR Experience App! Brought
     to you by a partnership between Drone Capital and Final Boss Studios.
 
-    
+
 
     There
     are two areas within the Michigan Science Center to explore: the Mackinac Bridge
     and the Booth area.
 
-    
+
 
     To experience the Mackinac Bridge, start scanning
     the environment near the Entrance/Elevator on the west side of the building.
 
-    
+
 
     To
     explore the Booth area, approach the Final Boss Studios booth and start scanning
     the area until you see AR objects.
 
-    
 
-    If you need any help, please
-    ask the Final Boss booth staff.
 
-    
+    If you need any help, please ask the
+    Final Boss booth staff.
+
+
 
     We hope you enjoy the experience!'
 --- !u!222 &98963285
@@ -10305,6 +10305,7 @@ MonoBehaviour:
   _FlyButton: {fileID: 1260834520}
   _LandButton: {fileID: 423348254}
   _Controls: {fileID: 1449157753}
+  _CoinCounterText: {fileID: 0}
 --- !u!4 &595277361
 Transform:
   m_ObjectHideFlags: 0
@@ -15772,196 +15773,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863242561}
   m_Mesh: {fileID: 4300152, guid: 83e5ddd5977f64451bf5d8f291b767be, type: 3}
---- !u!1 &863477407
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 863477409}
-  - component: {fileID: 863477408}
-  m_Layer: 0
-  m_Name: Ocean
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &863477408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863477407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f6fd535518f5540b4bcc3099582f77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 2
-  decalLayerMask: 1
-  lightLayerMask: 1
-  largeBand0FadeToggle: 1
-  largeBand1FadeToggle: 1
-  ripplesFadeToggle: 1
-  surfaceType: 0
-  geometryType: 3
-  meshRenderers: []
-  timeMultiplier: 1
-  cpuSimulation: 1
-  cpuFullResolution: 0
-  cpuEvaluateRipples: 0
-  customMaterial: {fileID: 0}
-  startSmoothness: 0.95
-  endSmoothness: 0.85
-  smoothnessFadeStart: 100
-  smoothnessFadeDistance: 500
-  refractionColor: {r: 0.010022826, g: 0.21404114, b: 0.21404114, a: 1}
-  maxRefractionDistance: 0.5
-  absorptionDistance: 1.5
-  scatteringColor: {r: 0, g: 0.13286833, b: 0.13286833, a: 1}
-  ambientScattering: 0.2
-  heightScattering: 0.2
-  displacementScattering: 0.1
-  directLightTipScattering: 0.6
-  directLightBodyScattering: 0.5
-  maximumHeightOverride: 0
-  caustics: 0
-  causticsIntensity: 0.5
-  causticsPlaneBlendDistance: 1
-  causticsResolution: 256
-  causticsBand: 2
-  virtualPlaneDistance: 4
-  causticsTilingFactor: 1
-  causticsDirectionalShadow: 0
-  causticsDirectionalShadowDimmer: 0.25
-  renderingLayerMask: 257
-  debugMode: 0
-  waterMaskDebugMode: 0
-  waterCurrentDebugMode: 0
-  currentDebugMultiplier: 1
-  waterFoamDebugMode: 0
-  underWater: 0
-  volumeBounds: {fileID: 0}
-  volumeDepth: 50
-  volumeHeight: 0
-  volumePrority: 0
-  absorptionDistanceMultiplier: 1
-  colorPyramidOffset: 1
-  underWaterAmbientProbeContribution: 1
-  underWaterScatteringColorMode: 0
-  underWaterScatteringColor: {r: 0, g: 0.27, b: 0.23, a: 1}
-  underWaterRefraction: 0
-  largeCurrentSpeedValue: 0
-  largeCurrentMap: {fileID: 0}
-  largeCurrentRegionExtent: {x: 100, y: 100}
-  largeCurrentRegionOffset: {x: 0, y: 0}
-  largeCurrentMapInfluence: 1
-  ripplesCurrentSpeedValue: 0
-  ripplesCurrentMap: {fileID: 0}
-  ripplesCurrentRegionExtent: {x: 100, y: 100}
-  ripplesCurrentRegionOffset: {x: 0, y: 0}
-  ripplesCurrentMapInfluence: 1
-  deformation: 0
-  deformationRes: 512
-  deformationAreaSize: {x: 200, y: 200}
-  deformationAreaOffset: {x: 0, y: 0}
-  foam: 1
-  foamResolution: 512
-  foamAreaSize: {x: 200, y: 200}
-  foamAreaOffset: {x: 0, y: 0}
-  foamPersistenceMultiplier: 0.5
-  foamTextureTiling: 0.15
-  foamSmoothness: 1
-  simulationFoam: 1
-  simulationFoamAmount: 0.2
-  simulationFoamMask: {fileID: 0}
-  simulationFoamMaskExtent: {x: 100, y: 100}
-  simulationFoamMaskOffset: {x: 0, y: 0}
-  simulationFoamWindCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.2
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  repetitionSize: 500
-  largeOrientationValue: 0
-  largeWindSpeed: 30
-  largeChaos: 0.85
-  largeBand0Multiplier: 1
-  largeBand0FadeMode: 1
-  largeBand0FadeStart: 1500
-  largeBand0FadeDistance: 3000
-  largeBand1Multiplier: 1
-  largeBand1FadeMode: 1
-  largeBand1FadeStart: 300
-  largeBand1FadeDistance: 800
-  ripples: 1
-  ripplesMotionMode: 0
-  ripplesOrientationValue: 0
-  ripplesWindSpeed: 8
-  ripplesChaos: 0.8
-  ripplesFadeMode: 1
-  ripplesFadeStart: 50
-  ripplesFadeDistance: 200
-  waterMask: {fileID: 0}
-  waterMaskRemap: {x: 0, y: 1}
-  waterMaskExtent: {x: 100, y: 100}
-  waterMaskOffset: {x: 0, y: 0}
---- !u!4 &863477409
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863477407}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.45, y: 0, z: -412.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &865705354
 GameObject:
   m_ObjectHideFlags: 0
@@ -26245,79 +26056,6 @@ MonoBehaviour:
   mDatasetName: Vuforia/705Night.xml
   mCastedBehaviour: {fileID: 1450777063}
   mType: 0
---- !u!1001 &1463295454
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_Name
-      value: Boat
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.068879
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -419.73987
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.4181662
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.4181662
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.57020795
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.57020795
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -107.491
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 634ad5f0d4931d44f93ab3ead078e6a2, type: 3}
 --- !u!1 &1477200750
 GameObject:
   m_ObjectHideFlags: 0
@@ -30414,8 +30152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HUD: {fileID: 0}
   mainMenu: {fileID: 0}
-  ScanningUI: {fileID: 0}
-  startButtonPressed: 0
 --- !u!4 &1743021480
 Transform:
   m_ObjectHideFlags: 0
@@ -38481,5 +38217,3 @@ SceneRoots:
   - {fileID: 2062118545}
   - {fileID: 865705358}
   - {fileID: 4954422}
-  - {fileID: 1463295454}
-  - {fileID: 863477409}
