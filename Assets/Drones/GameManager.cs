@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         UpdateControls(ref _MovingLeft);
         UpdateControls(ref _MovingBack);
 
-        _DroneController.Move(_MovingLeft._axis * _MovingLeft._direction, _MovingBack._axis * _MovingBack._direction);
+        //_DroneController.Move(_MovingLeft._axis * _MovingLeft._direction, _MovingBack._axis * _MovingBack._direction);
     }
     void UpdateControls(ref DroneAnimationControls _controls)
     {

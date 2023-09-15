@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-17.6415 -16.1365 -48.2187 33.8404 6.5731 10.7134" targetId="18d2b303b98647e8a4a69dcd22e84db7" name="MSCCafe" pathAuthoring="18d2b303b98647e8a4a69dcd22e84db7_authoring.glb" pathOcclusion="18d2b303b98647e8a4a69dcd22e84db7_occlusion.3dt" pathNavMesh="18d2b303b98647e8a4a69dcd22e84db7_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>
