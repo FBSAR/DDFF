@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public Button _FlyButton;
     public Button _LandButton;
     public GameObject _Controls;
-    public Text _CoinCounterText;
     struct DroneAnimationControls
     {
         public bool _moving;
@@ -40,7 +39,7 @@ public class GameManager : MonoBehaviour
         UpdateControls(ref _MovingLeft);
         UpdateControls(ref _MovingBack);
 
-        //_DroneController.Move(_MovingLeft._axis * _MovingLeft._direction, _MovingBack._axis * _MovingBack._direction);
+        _DroneController.Move(_MovingLeft._axis * _MovingLeft._direction, _MovingBack._axis * _MovingBack._direction);
     }
     void UpdateControls(ref DroneAnimationControls _controls)
     {
@@ -140,13 +139,5 @@ public class GameManager : MonoBehaviour
     public void EventOnForwardButtonReleased()
     {
         _MovingBack._moving = false;
-    }
-
-    public void StartGame()
-    {
-        Debug.Log("Game start");
-        _CoinCounterText = GameObject.Find("CoinCounterText").GetComponent<Text>();
-        _CoinCounterText.text = (Int16.Parse(_CoinCounterText.text) + 1).ToString();
-        Debug.Log(_CoinCounterText.text);
     }
 }

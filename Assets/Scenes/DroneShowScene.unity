@@ -4240,7 +4240,7 @@ PrefabInstance:
     - target: {fileID: -6057140222963153312, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: c8d9006ae20a69745abfc71a51c560d9, type: 2}
+      objectReference: {fileID: 9100000, guid: 00d020f31f33fe848869072e8646658a, type: 2}
     - target: {fileID: -6057140222963153312, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_AnimatePhysics
       value: 1
@@ -8763,7 +8763,7 @@ PrefabInstance:
     - target: {fileID: -6057140222963153312, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 96af48b47766ca045911afc4d9a83f87, type: 2}
+      objectReference: {fileID: 9100000, guid: 3ca44af30b9abcd459e939453749fde4, type: 2}
     - target: {fileID: -6057140222963153312, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_AnimatePhysics
       value: 1
