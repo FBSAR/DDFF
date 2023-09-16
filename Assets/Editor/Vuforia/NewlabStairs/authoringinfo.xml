@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-23.0105 -13.3831 -24.6167 11.5164 8.8410 9.6941" targetId="b010c586e1d949f794f584d0adb1a5e7" name="NewlabStairs" pathAuthoring="b010c586e1d949f794f584d0adb1a5e7_authoring.glb" pathOcclusion="b010c586e1d949f794f584d0adb1a5e7_occlusion.3dt" pathNavMesh="b010c586e1d949f794f584d0adb1a5e7_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-26.4788 -13.4317 -22.5630 9.4000 4.6075 14.6086" targetId="3231c81293314b5a9e191071204a4981" name="NextToBTS" pathAuthoring="3231c81293314b5a9e191071204a4981_authoring.glb" pathOcclusion="3231c81293314b5a9e191071204a4981_occlusion.3dt" pathNavMesh="3231c81293314b5a9e191071204a4981_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>
