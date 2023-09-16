@@ -15629,11 +15629,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821e49a814b3b564e9c9c1de5c0016f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _DroneController: {fileID: 0}
-  _FlyButton: {fileID: 1260834520}
-  _LandButton: {fileID: 423348254}
-  _Controls: {fileID: 1449157753}
-  _CoinCounterText: {fileID: 0}
 --- !u!4 &595277361
 Transform:
   m_ObjectHideFlags: 0
@@ -30445,7 +30440,7 @@ PrefabInstance:
     - target: {fileID: -6057140222963153312, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: dad52f64d0ccc944eb5b3d676101be57, type: 2}
+      objectReference: {fileID: 9100000, guid: 19e657f451918044596c09536c89d1d3, type: 2}
     - target: {fileID: -6057140222963153312, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_AnimatePhysics
       value: 1
@@ -44686,7 +44681,7 @@ PrefabInstance:
     - target: {fileID: -6057140222963153312, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cc3d91f75fcd49040a9654f88cb8b6d5, type: 2}
+      objectReference: {fileID: 9100000, guid: da505100e47dac349962a8715a308ca5, type: 2}
     - target: {fileID: -6057140222963153312, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
       propertyPath: m_AnimatePhysics
       value: 1
