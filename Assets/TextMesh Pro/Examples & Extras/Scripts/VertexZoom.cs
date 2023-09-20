@@ -150,8 +150,8 @@ namespace TMPro.Examples
                     destinationVertices[vertexIndex + 3] += offset;
 
                     // Restore Source UVS which have been modified by the sorting
-                    Vector2[] sourceUVs0 = cachedMeshInfoVertexData[materialIndex].uvs0;
-                    Vector2[] destinationUVs0 = textInfo.meshInfo[materialIndex].uvs0;
+                    Vector4[] sourceUVs0 = cachedMeshInfoVertexData[materialIndex].uvs0;
+                    Vector4[] destinationUVs0 = textInfo.meshInfo[materialIndex].uvs0;
 
                     destinationUVs0[vertexIndex + 0] = sourceUVs0[vertexIndex + 0];
                     destinationUVs0[vertexIndex + 1] = sourceUVs0[vertexIndex + 1];
@@ -178,7 +178,18 @@ namespace TMPro.Examples
 
                     // Updated modified vertex attributes
                     textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
-                    textInfo.meshInfo[i].mesh.uv = textInfo.meshInfo[i].uvs0;
+
+                    // Convert Vector4 UVs to Vector2 UVs
+                    Vector4[] srcUVs = textInfo.meshInfo[i].uvs0;
+                    Vector2[] newUVs = new Vector2[srcUVs.Length];
+
+                    for (int j = 0; j < srcUVs.Length; j++)
+                    {
+                        newUVs[j] = new Vector2(srcUVs[j].x, srcUVs[j].y);
+                    }
+
+                    textInfo.meshInfo[i].mesh.uv = newUVs;
+
                     textInfo.meshInfo[i].mesh.colors32 = textInfo.meshInfo[i].colors32;
 
                     m_TextComponent.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
@@ -187,6 +198,5 @@ namespace TMPro.Examples
                 yield return new WaitForSeconds(0.1f);
             }
         }
-
     }
 }
