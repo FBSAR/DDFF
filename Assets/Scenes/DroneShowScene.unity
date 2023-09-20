@@ -10769,7 +10769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &782628376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14799,12 +14799,12 @@ MonoBehaviour:
       m_Name: Position
       m_Type: 0
       m_ExpectedControlType: Vector3
-      m_Id: 
+      m_Id: f6047f9d-ed45-44ac-b060-99d5ee9709b8
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 
+        m_Id: ace4ad22-5c4f-4532-ab2c-26415642ae3a
         m_Path: <XRHMD>/centerEyePosition
         m_Interactions: 
         m_Processors: 
@@ -14827,12 +14827,12 @@ MonoBehaviour:
       m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: Quaternion
-      m_Id: 
+      m_Id: 28564256-f0e8-4d5e-bda1-5516b2afc24f
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 
+        m_Id: 423bcfd6-bf63-4687-b656-f07ba5a3f52f
         m_Path: <XRHMD>/centerEyeRotation
         m_Interactions: 
         m_Processors: 
@@ -14855,7 +14855,7 @@ MonoBehaviour:
       m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: Integer
-      m_Id: 
+      m_Id: 4d53ae9f-13c0-4240-9b37-2a7d2c152049
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -16237,6 +16237,7 @@ GameObject:
   - component: {fileID: 1193076463}
   - component: {fileID: 1193076462}
   - component: {fileID: 1193076461}
+  - component: {fileID: 1193076465}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -16286,7 +16287,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1114475419}
   m_OriginBaseGameObject: {fileID: 1193076460}
   m_CameraFloorOffsetObject: {fileID: 165374249}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.1176
 --- !u!4 &1193076464
 Transform:
@@ -16304,6 +16305,19 @@ Transform:
   - {fileID: 165374250}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1193076465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193076460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9eaf18ca062b7548a253e294dd203f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placedPrefab: {fileID: 6439708063556592067, guid: f6427d5a784de1244b09a45edbb98a3b, type: 3}
 --- !u!1 &1193602354
 GameObject:
   m_ObjectHideFlags: 0
@@ -21673,51 +21687,6 @@ Transform:
   m_Children:
   - {fileID: 1259492489}
   m_Father: {fileID: 1031533476}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1660084099
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1660084101}
-  - component: {fileID: 1660084100}
-  m_Layer: 0
-  m_Name: ARRaycastScript
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1660084100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660084099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9eaf18ca062b7548a253e294dd203f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 6439708063556592067, guid: f6427d5a784de1244b09a45edbb98a3b, type: 3}
---- !u!4 &1660084101
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660084099}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.26941, y: 223.29346, z: -8.288628}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1682041612
 PrefabInstance:
@@ -28097,14 +28066,13 @@ SceneRoots:
   m_Roots:
   - {fileID: 705507995}
   - {fileID: 1532267354}
-  - {fileID: 782628380}
   - {fileID: 1007148132}
   - {fileID: 1743021480}
+  - {fileID: 782628380}
   - {fileID: 776610242}
   - {fileID: 595277361}
   - {fileID: 2035821467}
   - {fileID: 483493847}
   - {fileID: 981584565}
-  - {fileID: 1660084101}
   - {fileID: 1193076464}
   - {fileID: 832709563}
