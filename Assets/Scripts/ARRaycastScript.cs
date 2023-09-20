@@ -34,7 +34,7 @@ public class ARRaycastScript : MonoBehaviour
 
     private void Start()
     {
-        showPlacement = GameObject.Find("ShowPlacement");
+        showPlacement = GameObject.Find("ConfirmPlacement");
         playShow = GameObject.Find("PlayShow");
     }
 
