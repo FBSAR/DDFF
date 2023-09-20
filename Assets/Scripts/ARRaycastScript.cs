@@ -88,7 +88,7 @@ public class ARRaycastScript : MonoBehaviour
     public void ConfirmPlacement()
     {
         showPlacement.transform.localScale = new Vector3(0, 0, 0);
-        playShow.transform.localScale = new Vector3(1, 1, 1);
+        playShow.transform.localScale = new Vector3(0, 0, 0);
         confirmedPlacement = true;
     }
 
