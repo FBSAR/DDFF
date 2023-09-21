@@ -3552,9 +3552,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743021479}
-        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
-        m_MethodName: StartButton
+      - m_Target: {fileID: 1569658914}
+        m_TargetAssemblyTypeName: ARRaycastScript, Assembly-CSharp
+        m_MethodName: StartShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8592,7 +8592,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Confirm Placement
 --- !u!222 &653979574
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21075,6 +21075,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1276603737757889232, guid: bed66fa02a04242a5b1d00c71e6a805f, type: 3}
   m_PrefabInstance: {fileID: 1566272198}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1569658913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569658915}
+  - component: {fileID: 1569658914}
+  m_Layer: 0
+  m_Name: ARRaycastScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1569658914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569658913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9eaf18ca062b7548a253e294dd203f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placedPrefab: {fileID: 6439708063556592067, guid: f6427d5a784de1244b09a45edbb98a3b, type: 3}
+--- !u!4 &1569658915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569658913}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.88325, y: 0.41970736, z: -368.84912}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1573778381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25576,9 +25621,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1743021479}
-        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
-        m_MethodName: StartButton
+      - m_Target: {fileID: 1569658914}
+        m_TargetAssemblyTypeName: ARRaycastScript, Assembly-CSharp
+        m_MethodName: ConfirmPlacement
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27904,3 +27949,4 @@ SceneRoots:
   - {fileID: 981584565}
   - {fileID: 1193076464}
   - {fileID: 832709563}
+  - {fileID: 1569658915}
