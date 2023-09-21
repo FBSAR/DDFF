@@ -5039,6 +5039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placedPrefab: {fileID: 6439708063556592067, guid: f6427d5a784de1244b09a45edbb98a3b, type: 3}
+  dronePrefab: {fileID: 0}
 --- !u!1 &1224083918
 GameObject:
   m_ObjectHideFlags: 0
@@ -6142,7 +6143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9eaf18ca062b7548a253e294dd203f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 1925769369408510531, guid: 7bbaf6361381b8049a0d69be5359c45c, type: 3}
+  placedPrefab: {fileID: 6439708063556592067, guid: f6427d5a784de1244b09a45edbb98a3b, type: 3}
+  dronePrefab: {fileID: 1925769369408510531, guid: 7bbaf6361381b8049a0d69be5359c45c, type: 3}
 --- !u!4 &1569658915
 Transform:
   m_ObjectHideFlags: 0

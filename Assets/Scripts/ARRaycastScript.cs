@@ -15,6 +15,13 @@ public class ARRaycastScript : MonoBehaviour
     GameObject placedPrefab;
 
     /// <summary>
+    /// The Prefab will be instatiated on touch
+    /// </summary>
+    [SerializeField]
+    [Tooltip("Drone Show Fab that is placed after the user presses the confirm button")]
+    GameObject dronePrefab;
+
+    /// <summary>
     /// The Instantiated object
     /// </summary>
     GameObject spawnedObject;
@@ -69,6 +76,11 @@ public class ARRaycastScript : MonoBehaviour
             Vector3 lookPos = Camera.main.transform.position - spawnedObject.transform.position;
             lookPos.y = 0;
             spawnedObject.transform.rotation = Quaternion.LookRotation(lookPos);
+
+            if (confirmedPlacement == true)
+            {
+                return;
+            }
         }
 
 
@@ -87,9 +99,13 @@ public class ARRaycastScript : MonoBehaviour
     
     public void ConfirmPlacement()
     {
-        showPlacement.transform.localScale = new Vector3(0, 0, 0);
-        playShow.transform.localScale = new Vector3(0, 0, 0);
+        /// Needs to capture the last touch position
+        /// Visualize placeholder/ space being taken up before placement - Needs to be the same size as Drown show altogether
+        /// Press a 'play' button to start the drown show
+        /// Restart button to restart the drone show
         confirmedPlacement = true;
+        var hitPose = hits[0].pose;
+        spawnedObject = Instantiate(dronePrefab, hitPose.position, hitPose.rotation);
     }
 
     public void StartShow()
