@@ -75,7 +75,7 @@ public class ARRaycastScript : MonoBehaviour
             // To make the spawned object position always look at the camera.
             Vector3 lookPos = Camera.main.transform.position - spawnedObject.transform.position;
             lookPos.y = 0;
-            spawnedObject.transform.rotation = Quaternion.LookRotation(lookPos);
+            spawnedObject.transform.rotation = Quaternion.Euler(0,-90,0);
 
             if (confirmedPlacement == true)
             {
